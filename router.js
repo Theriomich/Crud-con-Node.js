@@ -3,16 +3,14 @@ const router = express.Router()
 
 const conexion = require("./database/db")
 
-router.get("/", (req, res)=>{
-  res.render("index")
-  conexion.query("SELECT * FROM users", (error, results)=>{
-    if(error){
-      throw error
-    }else{
-      res.send("index", {results:results})
+router.get("/", (req, res) => {
+  conexion.query("SELECT * FROM users", (error, result) => {
+    if (error) {
+      throw error;
+    } else {
+      res.render("index", { results: result }); 
     }
-  })
- })
+  });
+});
 
-
-module.exports= router;
+module.exports = router;

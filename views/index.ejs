@@ -42,7 +42,7 @@
 
     <div class="container">
       <a href="/crate" class="btn btn-outline-primary mt-4"><i class='bx bxs-plus-circle bx-md' ></i></a>
-      <table>
+      <table class="table table-bordered table-striped text center mt-7">
         <thead>
           <tr class="bg-primary text-white">
             <th scope="col">ID</th>
@@ -52,18 +52,18 @@
           </tr>
         </thead>
         <tbody>
-          <% results.forEach((user) => { %>}
+          <% results.forEach((user) => { %>
           <tr>
             <td><%= user.id%></td>
             <td><%= user.user%></td>
             <td><%= user.rol%></td>
             <td>
               <a href="/edit" class="btn btn-outline-info">editar</a>
-              <a href="/delete" class="btn btn-outline-info">borrar</a>
+              <a href="/delete" class="btn btn-outline-danger">borrar</a>
             </td>
 
           </tr>
-          <%}) %>
+          <% }) %>
         </tbody>
       </table>
     </div>
