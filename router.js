@@ -13,4 +13,9 @@ router.get("/", (req, res) => {
   });
 });
 
+//RUTA PARA CREAR REGISTROS
+router.get("/create", (req,res)=> {
+  res.render("create")
+})
+
 module.exports = router;
